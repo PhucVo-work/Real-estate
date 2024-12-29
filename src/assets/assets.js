@@ -21,10 +21,10 @@ import profile_img_3 from "./profile_img_3.png";
 import stepSection_img from "./stepSection_img.jpg";
 import relator_img from "./relator_img.png";
 import searchhome_img from "./searchhome_img.png";
-import reason_img from "./reason_img.jpg";
 import discover_img from "./discover_img.png";
 import keyhome_img from "./keyhome_img.png";
-import communication_icon from "./communication_icon.svg"
+import communication_icon from "./communication_icon.svg";
+import construction_img from "./construction_img.png";
 
 export const assets = {
   logo,
@@ -46,9 +46,9 @@ export const assets = {
   searchhome_img,
   relator_img,
   discover_img,
-  reason_img,
   keyhome_img,
-  communication_icon
+  communication_icon,
+  construction_img
 };
 
 export const projectsData = [

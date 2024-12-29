@@ -40,7 +40,7 @@ const Contact = () => {
 
   return (
     <div
-      className="h-screen bg-center flex w-full overflow-y-scroll relative"
+      className="h-screen bg-center flex w-full overflow-y-scroll overflow-x-hidden relative"
       style={{
         backgroundImage: `url(${assets.bg_contact})`,
         backgroundSize: "cover", // Nếu cần cố định hình nền

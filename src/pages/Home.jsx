@@ -6,6 +6,7 @@ import Testimonails from "../components/Testimonails";
 import Footer from "../components/Footer";
 import StepsToBuyHome from "../components/StepsToBuyHome";
 import Discover from "../components/Discover";
+import TrustSection from "../components/trustSection";
 
 const Home = () => {
   return (
@@ -15,7 +16,8 @@ const Home = () => {
       <ProjectsSection/>
       <StepsToBuyHome/>
       <Discover/>
-      <Testimonails />
+      <Testimonails/>
+      <TrustSection/>
       <Footer/>
     </div>
   );

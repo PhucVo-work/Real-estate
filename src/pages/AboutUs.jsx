@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <div>
       <div className='pt-14'></div>
-      <About/>
+      
     </div>
   )
 }

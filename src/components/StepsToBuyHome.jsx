@@ -1,6 +1,7 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import { TbHomeSearch } from "react-icons/tb";
+import { motion } from "motion/react";
 
 const StepsToBuyHome = () => {
   return (
@@ -16,30 +17,48 @@ const StepsToBuyHome = () => {
       </p>
       <div className="flex flex-col lg:flex-row gap-4 md:gap-20">
         <div className="w-full border-l-0 lg:border-l-2 flex flex-col justify-around md:pl-10">
-          <div className="flex flex-col items-center sm:items-start md:text-left my-6">
-          <img src={assets.searchhome_img} className="w-12" alt="" />
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            transition={{ duration: 1.5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center sm:items-start md:text-left my-6"
+          >
+            <img src={assets.searchhome_img} className="w-12" alt="" />
             <h1 className="text-2xl font-medium my-3">Find Real Estate</h1>
             <p className="text-lg">
               Begin your journey by searching through a wide variety of listings
               to find the perfect home for you.
             </p>
-          </div>
-          <div className="flex flex-col items-center sm:items-start md:text-left my-6">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            transition={{ duration: 1.7 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center sm:items-start md:text-left my-6"
+          >
             <img src={assets.communication_icon} className="w-[68px]" alt="" />
             <h1 className="text-2xl font-medium my-3">Meet Relator</h1>
             <p className="text-lg">
               Work with a professional agent who can provide personalized
               guidance and answer all of your questions clearly.
             </p>
-          </div>
-          <div className="flex flex-col items-center sm:items-start md:text-left my-6">
-          <img src={assets.keyhome_img} className="w-14" alt="" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            transition={{ duration: 1.9 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center sm:items-start md:text-left my-6"
+          >
+            <img src={assets.keyhome_img} className="w-14" alt="" />
             <h1 className="text-2xl font-medium my-3">Take The Keys</h1>
             <p className="text-lg">
               Finalize the process, complete necessary documents, and receive
               the keys to unlock your brand-new home today.
             </p>
-          </div>
+          </motion.div>
         </div>
         <img
           src={assets.stepSection_img}

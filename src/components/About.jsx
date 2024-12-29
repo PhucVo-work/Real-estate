@@ -56,7 +56,7 @@ const About = () => {
             trust.
           </p>
           <button
-            onClick={() => navigate("/AboutUs")}
+            onClick={() => navigate("/About")}
             className="bg-brandColor-500 text-white px-8 py-3 rounded"
           >
             Learn more
