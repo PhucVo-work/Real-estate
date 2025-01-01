@@ -26,7 +26,7 @@ const ServiceHero = () => {
           duration: 1.7,
           ease: "easeInOut",
         }}
-        className="fixed left-1/2 top-1/2 bg-black"
+        className="fixed left-1/2 top-1/2 bg-black  "
       />
 
       <motion.div
