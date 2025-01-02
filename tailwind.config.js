@@ -22,5 +22,18 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".hide-scrollbar": {
+          /* Ẩn thanh cuộn nhưng vẫn giữ chức năng cuộn */
+          "scrollbar-width": "none", /* Firefox */
+          "-ms-overflow-style": "none", /* IE/Edge */
+        },
+        ".hide-scrollbar::-webkit-scrollbar": {
+          display: "none", /* Chrome, Safari, Edge */
+        },
+      });
+    },
+  ],
 };

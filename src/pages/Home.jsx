@@ -10,7 +10,7 @@ import TrustSection from "../components/trustSection";
 
 const Home = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-x-hidden">
       <Hero />
       <About />
       <ProjectsSection/>

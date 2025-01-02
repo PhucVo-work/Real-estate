@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { assets } from "../assets/assets";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+
+  const nav = useRef(null)
+
   const getNavLinkClass = (isActive) => {
     if (showMobileMenu) {
       return isActive
@@ -26,7 +29,7 @@ const Navbar = () => {
   }, [showMobileMenu]);
 
   return (
-    <div className="absolute top-7 left-0 right-0 m-auto z-10 max-w-[90%]">
+    <div className="absolute top-7 left-0 right-0 m-auto z-10 max-w-[90%]" ref={nav} >
       <div className="container flex justify-between items-center py-2 px-6 md:px-20 lg:px-26 fixed bg-white max-w-[90%] rounded-full drop-shadow-xl">
         <a href="">
           <img src={assets.logo2} className="h-12 scale-110" alt="" />

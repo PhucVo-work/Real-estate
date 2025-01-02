@@ -50,9 +50,11 @@ const ServiceHero = () => {
         whileInView={{ opacity: 1, y: 0, zIndex: "10" }}
         viewport={{ once: true }}
       >
-        <button className="rounded-full px-3 py-4 border border-white bg-transparent z-10 mt-16">
-          <img src={assets.down_arrow} className="w-5" alt="" />
-        </button>
+        <a href="#aboutSection">
+          <button className="rounded-full px-3 py-4 border border-white bg-transparent z-10 mt-16">
+            <img src={assets.down_arrow} className="w-5" alt="" />
+          </button>
+        </a>
       </motion.div>
     </div>
   );
