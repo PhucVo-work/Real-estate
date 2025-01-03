@@ -6,7 +6,7 @@ const detailService = () => {
   return (
     <div
       className="bg-white z-10 flex justify-center items-center w-full h-full "
-      id="#aboutSection"
+      id="aboutSection"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-36">
         <motion.div

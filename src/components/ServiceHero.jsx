@@ -11,8 +11,8 @@ const ServiceHero = () => {
       <motion.div
         initial={{
           borderRadius: "50%",
-          width: "400px",
-          height: "400px",
+          width: "200px",
+          height: "200px",
           x: "-50%",
           y: "-50%",
         }}
@@ -20,7 +20,7 @@ const ServiceHero = () => {
           width: "300vh",
           height: "300vh",
           borderRadius: "50%",
-          opacity: "0.5",
+          opacity: 0.5,
         }}
         transition={{
           duration: 1.7,

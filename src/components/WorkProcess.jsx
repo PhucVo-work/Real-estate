@@ -1,78 +1,84 @@
 import React from "react";
-import { FaDraftingCompass, FaHammer, FaHome, FaHeadset } from "react-icons/fa";
 import { motion } from "motion/react";
 
 const WorkProcess = () => {
   return (
-    <div
-      className="bg-white z-10 flex justify-center items-center w-full h-full "
-      id="#aboutSection"
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-36">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          transition={{ duration: 1.8, delay: 0.2 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className=" text-center flex flex-col items-center px-4 "
-        >
-          <FaDraftingCompass className="text-6xl text-brandColor-500 mb-6" />
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4  ">
-            Architectural Design
-          </h2>
-          <p className="text-gray-600 text-xl ">
-            Providing modern, personalized designs tailored to your needs
-          </p>
-        </motion.div>
+    <div className="bg-white z-10 flex lg:p-32 justify-center w-full h-full flex-col md:flex-wrap md:flex-row gap-24">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 1.8, delay: 0.2 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-[38%]"
+      >
+        <h2 className="text-3xl font-semibold text-white mb-4 py-4 bg-brandColor-500 w-full">
+          Step 1
+        </h2>
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4  ">
+          Analyze Requirements
+        </h2>
+        <p className="text-gray-600 text-xl max-w-[400px] mb-4">
+          We carefully analyze your specific needs and ensure we capture every
+          crucial detail for success
+        </p>
+      </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          transition={{ duration: 1.8, delay: 0.6 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className=" text-center flex flex-col items-center px-4 "
-        >
-          <FaHammer className="text-6xl text-brandColor-500 mb-6" />
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4  ">
-            Construction Execution
-          </h2>
-          <p className="text-gray-600 text-xl ">
-            Ensuring quality and timelines with our skilled technical team
-          </p>
-        </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 1.8, delay: 0.6 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-[38%]"
+      >
+        <h2 className="text-3xl font-semibold text-white mb-4 py-4 bg-brandColor-500 w-full">
+          Step 2
+        </h2>
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4  ">
+          Design the Plan
+        </h2>
+        <p className="text-gray-600 text-xl max-w-[400px] mb-4">
+          We create designs aligned with your vision and objectives, emphasizing
+          creativity and practicality
+        </p>
+      </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          transition={{ duration: 1.8, delay: 0.8 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className=" text-center flex flex-col items-center px-4 "
-        >
-          <FaHome className="text-6xl text-brandColor-500 mb-6" />
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4  ">
-            Home Renovation
-          </h2>
-          <p className="text-gray-600 text-xl ">
-            Transforming old spaces into modern, stylish living areas
-          </p>
-        </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 1.8, delay: 1.0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-[38%]"
+      >
+        <h2 className="text-3xl font-semibold text-white mb-4 py-4 bg-brandColor-500 w-full">
+          Step 3
+        </h2>
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4  ">
+          Build with Precision
+        </h2>
+        <p className="text-gray-600 text-xl max-w-[400px] mb-4">
+          We execute construction with precision, skill, and an unwavering focus
+          on delivering high quality
+        </p>
+      </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          transition={{ duration: 1.8, delay: 1.0 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className=" text-center flex flex-col items-center px-4 "
-        >
-          <FaHeadset className="text-6xl text-brandColor-500 mb-6" />
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4  ">
-            After-Sales Support
-          </h2>
-          <p className="text-gray-600 text-xl ">
-            Providing warranty and post-handover customer care
-          </p>
-        </motion.div>
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 200 }}
+        transition={{ duration: 1.8, delay: 1.2 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-[38%]"
+      >
+        <h2 className="text-3xl font-semibold text-white mb-4 py-4 bg-brandColor-500 w-full">
+          Step 4
+        </h2>
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4  ">
+          Inspect and Deliver
+        </h2>
+        <p className="text-gray-600 text-xl max-w-[400px] mb-4">
+          We inspect thoroughly and meticulously to ensure perfection before
+          handing it over to you
+        </p>
+      </motion.div>
     </div>
   );
 };
