@@ -29,7 +29,7 @@ const Navbar = () => {
   }, [showMobileMenu]);
 
   return (
-    <div className="absolute top-7 left-0 right-0 m-auto z-10 max-w-[90%]" ref={nav} >
+    <div className="absolute top-7 left-0 right-0 m-auto z-20 max-w-[90%]" ref={nav} >
       <div className="container flex justify-between items-center py-2 px-6 md:px-20 lg:px-26 fixed bg-white max-w-[90%] rounded-full drop-shadow-xl">
         <a href="">
           <img src={assets.logo2} className="h-12 scale-110" alt="" />
@@ -49,7 +49,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             to="/Projects"
-            className="cursor-pointer motion-reduce:transition-none motion-reduce:hover:transform-none hover:-translate-y-1 transition duration-300 ease-in-out "
+            className={({ isActive }) => getNavLinkClass(isActive)}
           >
             Projects
           </NavLink>
@@ -105,6 +105,13 @@ const Navbar = () => {
             className={({ isActive }) => getNavLinkClass(isActive)}
           >
             Projects
+          </NavLink>
+          <NavLink
+            onClick={() => setShowMobileMenu(false)}
+            to="/Service"
+            className={({ isActive }) => getNavLinkClass(isActive)}
+          >
+            Service
           </NavLink>
           <NavLink
             onClick={() => setShowMobileMenu(false)}

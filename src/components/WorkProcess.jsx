@@ -9,7 +9,7 @@ const WorkProcess = () => {
         transition={{ duration: 1.8, delay: 0.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-[38%]"
+        className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-full md:w-[38%]"
       >
         <h2 className="text-3xl font-semibold text-white mb-4 py-4 bg-brandColor-500 w-full">
           Step 1
@@ -28,7 +28,7 @@ const WorkProcess = () => {
         transition={{ duration: 1.8, delay: 0.6 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-[38%]"
+        className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-full md:w-[38%]"
       >
         <h2 className="text-3xl font-semibold text-white mb-4 py-4 bg-brandColor-500 w-full">
           Step 2
@@ -47,7 +47,7 @@ const WorkProcess = () => {
         transition={{ duration: 1.8, delay: 1.0 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-[38%]"
+        className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-full md:w-[38%]"
       >
         <h2 className="text-3xl font-semibold text-white mb-4 py-4 bg-brandColor-500 w-full">
           Step 3
@@ -66,7 +66,7 @@ const WorkProcess = () => {
         transition={{ duration: 1.8, delay: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-[38%]"
+        className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-full md:w-[38%]"
       >
         <h2 className="text-3xl font-semibold text-white mb-4 py-4 bg-brandColor-500 w-full">
           Step 4

@@ -26,6 +26,7 @@ import discover_img from "./discover_img.png";
 import keyhome_img from "./keyhome_img.png";
 import communication_icon from "./communication_icon.svg";
 import construction_img from "./construction_img.png";
+import why_choose_img from "./why_choose_img.svg";
 
 export const assets = {
   logo,
@@ -50,7 +51,8 @@ export const assets = {
   discover_img,
   keyhome_img,
   communication_icon,
-  construction_img
+  construction_img,
+  why_choose_img
 };
 
 export const projectsData = [

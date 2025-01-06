@@ -21,8 +21,7 @@ const Discover = () => {
           Discover a place you'll love to live
         </h1>
         <p className="text-xl mt-16 max-w-xl mx-auto">
-          Pellentesque egestas elementum egestas faucibus sem. Velit nunc
-          egestas ut morbi. Leo diam diam
+        Explore homes designed to match your lifestyle, built with care and modern elegance.
         </p>
         <NavLink to={"/Projects"}>
           <button className="mt-16 bg-brandColor-500 px-8 py-3 rounded flex items-center mx-auto">
