@@ -32,7 +32,7 @@ const ProjectsSection = () => {
 
   return (
     <div className="bg-gray-100">
-      <div className="container mx-auto pt-20 pb-20 px-6 md:px-20 lg:px-32 my-20 w-full overflow-hidde">
+      <div className="container mx-auto pt-20 pb-20 px-6 md:px-20 lg:px-32 my-20 w-full overflow-hidden">
         <motion.div
           initial={{ opacity: 0, x: -200 }}
           transition={{ duration: 1.5 }}

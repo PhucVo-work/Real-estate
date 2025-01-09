@@ -6,7 +6,7 @@ const WorkProcess = () => {
     <div className="bg-white z-10 flex lg:p-32 justify-center w-full h-full flex-col md:flex-wrap md:flex-row gap-24">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
-        transition={{ duration: 1.8, delay: 0.2 }}
+        transition={{ duration: 1.4, delay: 0.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-full md:w-[38%]"
@@ -25,7 +25,7 @@ const WorkProcess = () => {
 
       <motion.div
         initial={{ opacity: 0, y: 100 }}
-        transition={{ duration: 1.8, delay: 0.6 }}
+        transition={{ duration: 1.4, delay: 0.6 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-full md:w-[38%]"
@@ -44,7 +44,7 @@ const WorkProcess = () => {
 
       <motion.div
         initial={{ opacity: 0, y: 100 }}
-        transition={{ duration: 1.8, delay: 1.0 }}
+        transition={{ duration: 1.4, delay: 1.0 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-full md:w-[38%]"
@@ -63,7 +63,7 @@ const WorkProcess = () => {
 
       <motion.div
         initial={{ opacity: 0, y: 200 }}
-        transition={{ duration: 1.8, delay: 1.2 }}
+        transition={{ duration: 1.4, delay: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className=" text-center flex flex-col items-center border-brandColor-500 border-4 rounded-lg w-full md:w-[38%]"

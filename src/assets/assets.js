@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import logo2 from "./logo2.png";
-import bg_contact from "./bg_contact.png"
-import header_img from "./header_img.png"
+import bg_contact from "./bg_contact.png";
+import header_img from "./header_img.png";
 import logo_dark from "./logo_dark.svg";
 import cross_icon from "./cross_icon.svg";
 import menu_icon from "./menu_icon.svg";
@@ -27,6 +27,7 @@ import keyhome_img from "./keyhome_img.png";
 import communication_icon from "./communication_icon.svg";
 import construction_img from "./construction_img.png";
 import why_choose_img from "./why_choose_img.svg";
+import about_video from "./about_video.mp4";
 
 export const assets = {
   logo,
@@ -52,7 +53,8 @@ export const assets = {
   keyhome_img,
   communication_icon,
   construction_img,
-  why_choose_img
+  why_choose_img,
+  about_video,
 };
 
 export const projectsData = [
@@ -91,6 +93,45 @@ export const projectsData = [
     price: "$2,50,000",
     location: "Chicago",
     image: project_img_6,
+  },
+];
+
+export const teamDate = [
+  {
+    name: "Albert Levin",
+    position: "Head of Design",
+    experience: "15",
+    url: "https://lvn.studio/wp-content/uploads/2023/09/1-Albert-818x1024.webp",
+  },
+  {
+    name: "Arch. Shahar Nof Agam",
+    position: "Architecture Head",
+    experience: "12",
+    url: "https://lvn.studio/wp-content/uploads/2023/09/2-Shahar-1-833x1024.webp",
+  },
+  {
+    name: "Shane David",
+    position: "Senior Designer",
+    experience: "10",
+    url: "https://lvn.studio/wp-content/uploads/2023/09/3-Shani-1-787x1024.webp",
+  },
+  {
+    name: "Tal Bachar",
+    position: "Construction Lead",
+    experience: "10",
+    url: "https://lvn.studio/wp-content/uploads/2023/09/4-Tal-1-768x1144.webp",
+  },
+  {
+    name: "Ariella Snayder",
+    position: "Interior designer",
+    experience: "8",
+    url: "https://lvn.studio/wp-content/uploads/2023/09/5-Ariella-1-771x1024.webp",
+  },
+  {
+    name: "Paz Cohen",
+    position: "CEO",
+    experience: "10",
+    url: "https://lvn.studio/wp-content/uploads/2023/09/6-Paz-1-768x1027.webp",
   },
 ];
 

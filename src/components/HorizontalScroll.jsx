@@ -15,6 +15,7 @@ const HorizontalScroll = ({ components }) => {
     ["0%", `-${(components.length - 1) * 100}%`]
   );
   
+  const className = components.length > 2 ? "min-h-[280vh]" : "min-h-[260vh]"
 
   return (
     <div className="w-full">
@@ -23,7 +24,7 @@ const HorizontalScroll = ({ components }) => {
         {components.map((Component, index) => (
           <div 
             key={index}
-            className="min-h-screen w-full flex items-center justify-center p-10 z-0"
+            className="min-h-screen w-full flex z-0"
           >
             <Component />
           </div>
@@ -33,7 +34,7 @@ const HorizontalScroll = ({ components }) => {
       {/* On desktop (≥ 1024px), use horizontal scroll effect */}
       <section 
         ref={targetRef} 
-        className={` hidden lg:block min-h-[${components.length===2 ? 260 : 290} vh] `}
+        className={`hidden lg:block ${className} `}
       >
         <div className="sticky top-0 h-screen overflow-hidden">
           <motion.ul
@@ -43,7 +44,7 @@ const HorizontalScroll = ({ components }) => {
             {components.map((Component, index) => (
               <li
                 key={index}
-                className="w-screen h-full flex-shrink-0 flex items-center justify-center"
+                className="w-screen h-full flex-shrink-0 overflow-x-auto"
               >
                 <Component />
               </li>
