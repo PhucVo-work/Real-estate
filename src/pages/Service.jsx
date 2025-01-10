@@ -1,9 +1,9 @@
 import React from 'react'
-import ServiceHero from '../components/ServiceHero'
+import ServiceHero from '../components/servicePage/ServiceHero'
 import HorizontalScroll from '../components/HorizontalScroll'
-import WhyChooseUs from '../components/WhyChooseUs'
-import detailService from "../components/DetailService"
-import WorkProcess from "../components/WorkProcess"
+import WhyChooseUs from '../components/servicePage/WhyChooseUs'
+import detailService from "../components/servicePage/DetailService"
+import WorkProcess from "../components/servicePage/WorkProcess"
 
 const Service = () => {
   const componentsAray = [detailService, WorkProcess]

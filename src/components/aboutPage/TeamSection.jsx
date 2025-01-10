@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { assets, projectsData, teamDate } from "../assets/assets";
+import { motion } from "framer-motion";
+import { teamData } from "../../assets/assets";
 
 const TeamSection = () => {
-  const [currnetIndex, setCurrentIndex] = useState(0);
-  const [cardToShow, setCardToShow] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsToShow, setCardsToShow] = useState(1);
 
   useEffect(() => {
     const updateCardsToShow = () => {
-      if (window.innerWidth >= 1024) {
-        setCardToShow(projectsData.length);
-      } else {
-        setCardToShow(1);
-      }
+      setCardsToShow(window.innerWidth >= 1024 ? teamData.length : 1);
     };
     updateCardsToShow();
     window.addEventListener("resize", updateCardsToShow);
@@ -19,12 +16,12 @@ const TeamSection = () => {
   }, []);
 
   const nextProject = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projectsData.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % teamData.length);
   };
 
   const prevProject = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? projectsData.length - 1 : prevIndex - 1
+      prevIndex === 0 ? teamData.length - 1 : prevIndex - 1
     );
   };
 
@@ -42,33 +39,64 @@ const TeamSection = () => {
           <button
             className="p-3 rounded bg-gray-200 mr-2"
             aria-label="Previous project"
-            onClick={() => {
-              prevProject();
-            }}
+            onClick={prevProject}
           >
-            <img src={assets.left_arrow} alt="Previous" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
           </button>
           <button
             className="p-3 rounded bg-gray-200 mr-2"
             aria-label="Next project"
-            onClick={() => {
-              nextProject();
-            }}
+            onClick={nextProject}
           >
-            <img src={assets.right_arrow} alt="Next" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
           </button>
         </div>
       </div>
-      {/* projects slider container */}
+
       <div className="overflow-hidden">
         <div
           className="flex gap-8 transition-transform duration-500 ease-in-out"
           style={{
-            transform: `translateX(-${(currnetIndex * 100) / cardToShow}%)`,
+            transform: `translateX(-${(currentIndex * 100) / cardsToShow}%)`,
           }}
         >
-          {teamDate.map((member, index) => (
-            <div key={index} className="relative flex-shrink-0 w-full sm:w-[28%]">
+          {teamData.map((member, index) => (
+            <motion.div
+              key={index}
+              className="relative flex-shrink-0 w-full sm:w-[28%]"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.75,
+                delay: index * 0.05,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true }}
+            >
               <img
                 src={member.url}
                 alt={member.name}
@@ -80,12 +108,12 @@ const TeamSection = () => {
                     {member.name}
                   </h2>
                   <p className="text-gray-500 text-sm">
-                    {member.position} <span className="px-1"> | </span>{" "}
-                    {member.experience}{" year of experience"}
+                    {member.position} <span className="px-1">|</span>
+                    {member.experience} years of experience
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

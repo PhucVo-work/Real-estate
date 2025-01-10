@@ -1,21 +1,20 @@
-import React from 'react'
-import AboutHero from '../components/AboutHero'
-import HorizontalScroll from '../components/HorizontalScroll'
-import CoreValues from '../components/CoreValues'
-import TeamSection from '../components/TeamSection'
-import ClientCommitment from '../components/ClientCommitment'
+import React from "react";
+import AboutHero from "../components/aboutPage/AboutHero";
+import HorizontalScroll from "../components/HorizontalScroll";
+import CoreValues from "../components/aboutPage/CoreValues";
+import TeamSection from "../components/aboutPage/TeamSection";
+import ClientCommitment from "../components/aboutPage/ClientCommitment";
 
 const AboutUs = () => {
-
-  const components = [ AboutHero, CoreValues]
+  const components = [AboutHero, CoreValues];
 
   return (
     <div>
       <HorizontalScroll components={components} />
-      <TeamSection/>
-      <ClientCommitment/>
+      <TeamSection />
+      <ClientCommitment />
     </div>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;

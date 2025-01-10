@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { assets, projectsData } from "../assets/assets";
+import { assets, projectsData } from "../../assets/assets";
 import { motion } from "motion/react";
 import { NavLink } from "react-router-dom";
 
@@ -78,7 +78,15 @@ const ProjectsSection = () => {
               }}
             >
               {projectsData.map((project, index) => (
-                <div
+                <motion.div
+                  initial={{ opacity: 0, y: 100 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.75,
+                    delay: index * 0.05,
+                    ease: "easeOut",
+                  }}
+                  viewport={{ once: true }}
                   key={index}
                   className="relative flex-shrink-0 w-full sm:w-1/4"
                 >
@@ -98,14 +106,15 @@ const ProjectsSection = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
-          <div className="mt-10 w-full text-center" >
+          <div className="mt-10 w-full text-center">
             <NavLink
               to={"/Projects"}
-              className="px-8 py-3 bg-brandColor-500 rounded text-white hover:bg-brandColor-600">
+              className="px-8 py-3 bg-brandColor-500 rounded text-white hover:bg-brandColor-600"
+            >
               See More
             </NavLink>
           </div>

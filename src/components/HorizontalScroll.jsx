@@ -15,7 +15,7 @@ const HorizontalScroll = ({ components }) => {
     ["0%", `-${(components.length - 1) * 100}%`]
   );
   
-  const className = components.length > 2 ? "min-h-[280vh]" : "min-h-[260vh]"
+  const className = components.length > 2 ? "min-h-[280vh]" : "min-h-[261vh]"
 
   return (
     <div className="w-full">

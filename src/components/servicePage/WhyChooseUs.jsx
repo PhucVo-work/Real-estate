@@ -1,7 +1,23 @@
 import React from "react";
-import { assets } from "../assets/assets";
+import { motion } from "framer-motion";
+import { assets } from "../../assets/assets";
 
 const WhyChooseUs = () => {
+  const data = [
+    {
+      desc: "Professional team.",
+    },
+    {
+      desc: "On-time project delivery.",
+    },
+    {
+      desc: "Advanced technology.",
+    },
+    {
+      desc: "Reliable stats: 10+ years of experience, 12+ completed projects.",
+    },
+  ];
+
   return (
     <div className="w-full flex flex-col md:flex-row min-h-full bg-white p-10 pt-28 pb-10 md:px-20 lg:px-32 gap-4">
       <div className="relative min-w-[45%]">
@@ -44,24 +60,25 @@ const WhyChooseUs = () => {
           undertake.
         </p>
         <ul className="flex flex-col gap-8">
-          <li className="flex items-center gap-3">
-            <span className="text-2xl text-brandColor-500">✔</span>
-            <p className="text-xl font-medium text-gray-700">Professional team.</p>
-          </li>
-          <li className="flex items-center gap-3">
-            <span className="text-2xl text-brandColor-500">✔</span>
-            <p className="text-xl font-medium text-gray-700">On-time project delivery.</p>
-          </li>
-          <li className="flex items-center gap-3">
-            <span className="text-2xl text-brandColor-500">✔</span>
-            <p className="text-xl font-medium text-gray-700">Advanced technology.</p>
-          </li>
-          <li className="flex items-center gap-3">
-            <span className="text-2xl text-brandColor-500">✔</span>
-            <p className="text-xl font-medium text-gray-700">
-              Reliable stats: 10+ years of experience, 12+ completed projects.
-            </p>
-          </li>
+          {data.map((item, index) => {
+            return (
+              <motion.li
+                key={index}
+                initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.75,
+                  delay: index * 0.05,
+                  ease: "easeOut",
+                }}
+                viewport={{ once: true }}
+                className="flex items-center gap-3"
+              >
+                <span className="text-2xl text-brandColor-500">✔</span>
+                <p className="text-xl font-medium text-gray-700">{item.desc}</p>
+              </motion.li>
+            );
+          })}
         </ul>
       </div>
     </div>

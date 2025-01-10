@@ -1,5 +1,5 @@
 import React from "react";
-import { assets, testimonialsData } from "../assets/assets";
+import { assets, testimonialsData } from "../../assets/assets";
 import { motion } from "motion/react";
 
 const Testimonails = () => {

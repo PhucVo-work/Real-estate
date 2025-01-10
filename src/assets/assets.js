@@ -96,7 +96,7 @@ export const projectsData = [
   },
 ];
 
-export const teamDate = [
+export const teamData = [
   {
     name: "Albert Levin",
     position: "Head of Design",

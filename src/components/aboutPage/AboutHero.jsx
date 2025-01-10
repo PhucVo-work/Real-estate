@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { assets } from "../assets/assets";
+import { assets } from "../../assets/assets";
 
 const statsData = [
   { value: 60, label: "Years of Excellence" },
   { value: 160, label: "Projects Completed" },
   { value: 2006, label: "Mn. Sq. Ft. Delivered" },
-  { value: 40, label: "Ongoing Projects" }
+  { value: 40, label: "Ongoing Projects" },
 ];
 
 const StatItem = ({ value, label }) => {
@@ -32,8 +32,15 @@ const AboutHero = () => {
   return (
     <div className="flex flex-col md:flex-row h-full max-h-full gap-4 ">
       <div className="min-w-full md:min-w-[45%]">
-        <video src={assets.about_video} muted autoPlay loop playsInline type="video/mp4" className="max-w-full h-full object-cover">
-        </video>
+        <video
+          src={assets.about_video}
+          muted
+          autoPlay
+          loop
+          playsInline
+          type="video/mp4"
+          className="max-w-full h-full object-cover"
+        ></video>
       </div>
       <div className="min-w-full md:min-w-[55%] min-h-full flex flex-col md:justify-between pb-16  ">
         <div>
@@ -57,7 +64,19 @@ const AboutHero = () => {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ml-5 ">
           {statsData.map((stat, index) => (
-            <StatItem key={index} {...stat} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 120 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.85,
+                delay: index * 0.05,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true }}
+            >
+              <StatItem {...stat} />
+            </motion.div>
           ))}
         </div>
       </div>
