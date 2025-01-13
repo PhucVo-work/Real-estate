@@ -87,7 +87,7 @@ const TeamSection = () => {
           {teamData.map((member, index) => (
             <motion.div
               key={index}
-              className="relative flex-shrink-0 w-full sm:w-[28%]"
+              className="relative flex-shrink-0 w-full sm:w-[26%]"
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
@@ -100,10 +100,10 @@ const TeamSection = () => {
               <img
                 src={member.url}
                 alt={member.name}
-                className="w-full max-h-[438px] mb-14"
+                className="w-full max-h-[438px] min-h-[438px] mb-14"
               />
               <div className="absolute left-0 right-0 bottom-5 flex justify-center">
-                <div className="inline-block bg-white w-[88%] px-4 py-2 shadow-md">
+                <div className="inline-block bg-white w-[94%] px-4 py-2 shadow-md">
                   <h2 className="text-xl font-semibold text-gray-800">
                     {member.name}
                   </h2>
