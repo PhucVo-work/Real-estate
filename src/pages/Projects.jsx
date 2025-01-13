@@ -1,29 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import useProjectStore from '../store/useProjectStore';
 
 const Projects = () => {
-  const [data, setData] = useState([]);
+  const navigate = useNavigate();
+  const { projects, fetchProjects } = useProjectStore();
 
   useEffect(() => {
-    fetch("https://dummyjson.com/c/a9ce-4f10-4b15-a6e7")
-      .then((response) => {
-        if (!response.ok) throw new Error("Network response was not ok");
-        return response.json();
-      })
-      .then((response) => {
-        setData(response);
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching users:", error);
-      });
-  }, []);
+    fetchProjects();
+  }, [fetchProjects]);
+
+  const handleNavigateToDetail = (project) => {
+    navigate(`/${project.id}`, { state: { project } });
+  };
 
   const handleVideoHover = (index) => {
     const video = document.getElementById(`video-${index}`);
-    if (video) {
-      video.play().catch((err) => console.log("Video play error:", err));
-    }
+    if (video) video.play().catch((err) => console.log("Video play error:", err));
   };
 
   const handleVideoLeave = (index) => {
@@ -45,7 +39,7 @@ const Projects = () => {
         Our Projects
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8 px-16 md:px-32 lg:px-36">
-        {data.map((item, index) => (
+        {projects.map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 50 }}
@@ -56,9 +50,10 @@ const Projects = () => {
               ease: "easeOut",
             }}
             viewport={{ once: true }}
-            className="rounded-lg shadow-lg overflow-hidden border border-gray-200 transition-transform duration-300 "
+            className="rounded-lg shadow-lg overflow-hidden border border-gray-200 transition-transform duration-300"
             onMouseEnter={() => handleVideoHover(index)}
             onMouseLeave={() => handleVideoLeave(index)}
+            onClick={() => handleNavigateToDetail(item)}
           >
             <div className="relative w-full h-64">
               <video
